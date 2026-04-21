@@ -100,7 +100,7 @@ export default function Home() {
             <Image 
               className="object-cover filter brightness-[0.85] grayscale-[0.3]" 
               alt="High-end clinic interior"
-              src="/hero.png" 
+              src="/hero.avif" 
               fill
               priority
               sizes="100vw"
@@ -152,7 +152,7 @@ export default function Home() {
               <Image 
                 className="object-cover transition-transform duration-[3s] group-hover:scale-105" 
                 alt="Sophisticated skin treatment"
-                src="/treatment.png" 
+                src="/treatment.avif" 
                 fill
                 sizes="(max-width: 768px) 100vw, 66vw"
               />
@@ -229,7 +229,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
               <div className="reveal hover-scale">
                 <div className="ba-slider aspect-[4/3] md:aspect-[16/10] rounded-[32px] md:rounded-[60px] overflow-hidden shadow-2xl relative">
-                  <Image src="/results.png" alt="Before and After Results" className="object-cover" fill sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/results.avif" alt="Before and After Results" className="object-cover" fill sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 flex gap-4 text-white z-20">
                     <span className="px-4 md:px-6 py-2 bg-black/20 backdrop-blur-xl rounded-full text-[7px] md:text-[8px] uppercase tracking-widest font-bold">Before</span>
                     <span className="px-4 md:px-6 py-2 bg-primary/40 backdrop-blur-xl rounded-full text-[7px] md:text-[8px] uppercase tracking-widest font-bold">After 2 Weeks</span>

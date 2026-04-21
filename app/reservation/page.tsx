@@ -36,7 +36,7 @@ export default function ReservationPage() {
     <div className="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col relative overflow-hidden">
       {/* Immersive Background */}
       <div className="absolute inset-0 z-0">
-        <Image className="object-cover blur-sm opacity-10 grayscale" src="/hero.png" alt="" fill priority sizes="100vw" />
+        <Image className="object-cover blur-sm opacity-10 grayscale" src="/hero.avif" alt="" fill priority sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
       </div>
 
