@@ -32,20 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* Grainy Texture Overlay Removed for Performance */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.035;
-    /* background-image removed to achieve 100% Core Web Vitals on Mobile */
-    filter: brightness(1);
-  }
 }
 
 h1, h2, h3, h4, .font-serif {

@@ -49,10 +49,29 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <link 
+          rel="preload" 
+          as="style" 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
+        />
         <link
           rel="stylesheet"
+          media="print"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            document.querySelectorAll('link[media="print"]').forEach(function(link) {
+              link.media = 'all';
+            });
+          `
+        }}></script>
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          />
+        </noscript>
       </head>
       <body className="min-h-full flex flex-col font-body">{children}</body>
     </html>
