@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GlowUp Aesthetic Clinic | Kecantikan Anda, Prioritas Kami</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-tertiary-container": "#503a1d",
+                "inverse-on-surface": "#f3f0f0",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#e3e3de",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e4e2e1",
+                "on-secondary": "#ffffff",
+                "inverse-primary": "#e9bdad",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-background": "#1b1c1c",
+                "error-container": "#ffdad6",
+                "surface-tint": "#78574a",
+                "on-secondary-container": "#62635f",
+                "secondary-container": "#e0e0db",
+                "on-secondary-fixed-variant": "#454744",
+                "tertiary-fixed": "#ffddb6",
+                "surface-bright": "#fcf9f8",
+                "on-surface": "#1b1c1c",
+                "surface": "#fcf9f8",
+                "outline": "#82746f",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#303030",
+                "primary-fixed": "#ffdbce",
+                "on-tertiary-fixed": "#291801",
+                "surface-variant": "#e4e2e1",
+                "surface-container-high": "#eae7e7",
+                "on-surface-variant": "#504440",
+                "on-primary-container": "#54372b",
+                "on-primary-fixed-variant": "#5e3f34",
+                "tertiary-fixed-dim": "#e2c19b",
+                "on-tertiary-fixed-variant": "#594325",
+                "surface-dim": "#dcd9d9",
+                "tertiary-container": "#c3a47f",
+                "surface-container": "#f0eded",
+                "on-secondary-fixed": "#1a1c19",
+                "outline-variant": "#d4c3bd",
+                "tertiary": "#735a3a",
+                "on-primary-fixed": "#2d150c",
+                "primary-fixed-dim": "#e9bdad",
+                "secondary": "#5d5f5b",
+                "surface-container-low": "#f6f3f2",
+                "secondary-fixed-dim": "#c6c7c2",
+                "background": "#fcf9f8",
+                "primary": "#78574a",
+                "surface-container-lowest": "#ffffff",
+                "primary-container": "#c9a091"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "fontFamily": {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .display-md { font-size: 2.5rem; line-height: 1.2; }
+        .display-lg { font-size: 3.5rem; line-height: 1.1; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#fcf9f8]/80 backdrop-blur-xl dark:bg-[#1b1c1c]/80 docked full-width top-0 sticky z-50 shadow-[0_20px_50px_rgba(120,87,74,0.05)]">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#78574a] dark:text-[#c9a091]" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-serif text-2xl font-bold tracking-tighter text-[#78574a] dark:text-[#c9a091]">GlowUp Aesthetic Clinic</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-sans text-sm tracking-widest uppercase text-[#5d5f5b]">
+<a class="text-[#78574a] dark:text-[#c9a091] border-b-2 border-[#78574a]/20 pb-1 font-bold" href="#">Beranda</a>
+<a class="hover:text-[#78574a] transition-all duration-400 ease-in-out" href="#layanan">Layanan</a>
+<a class="hover:text-[#78574a] transition-all duration-400 ease-in-out" href="#tentang">Tentang Kami</a>
+<a class="hover:text-[#78574a] transition-all duration-400 ease-in-out" href="#kontak">Kontak</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-md font-bold tracking-tight scale-95 duration-400 ease-in-out hover:scale-100 shadow-xl shadow-primary/20">
+                Booking
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="luxurious aesthetic clinic interior with soft warm lighting, velvet seating, and rose gold accents, serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9fxEuW1tiwm2poqA5jqdrQUgYOmoqFpeXW6P2AF9mvuR5wGa2kUzV2RMURSsGULbD7QaGVWHNhby6uZLKQKO059WskN6-qixQvH-x_MdAHSY8TrpQlpUezcYWM0sen6qulLwilLmXM6C2ZXnzBISUMUsEWKcMxThfnJHEoiza8G80PBhDvtA8m5DGz5arrMHuYZIUPXDipzXfCXBeAt-ZfWh1BVxpB0BY9pdKZG3zkFJOlonHCX9IYqF3f3G_aKYXPXbIEEE128_q"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/95 via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl space-y-8">
+<h1 class="display-lg font-headline tracking-tight text-on-surface">
+                        Kecantikan Anda, <br/>
+<span class="italic text-primary">Prioritas Kami</span>
+</h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-lg">
+                        Rasakan kemewahan perawatan estetik kelas dunia dengan teknologi medis terkini. Kami menghadirkan harmoni antara sains dan seni untuk pancaran kecantikan abadi.
+                    </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-md font-bold tracking-wide hover:shadow-2xl hover:shadow-primary/30 transition-all duration-400">
+                            Konsultasi Gratis
+                        </button>
+<button class="text-primary font-bold border-b border-primary/30 pb-1 hover:border-primary transition-all">
+                            Lihat Menu Perawatan
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Layanan: Asymmetric Bento Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="layanan">
+<div class="mb-20 space-y-4">
+<span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">Layanan Pilihan</span>
+<h2 class="display-md font-headline">Layanan Unggulan Kami</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Feature -->
+<div class="md:col-span-7 group relative overflow-hidden rounded-xl bg-surface-container-low p-1">
+<div class="relative h-[500px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of a professional facial treatment being performed on a woman with glowing skin, soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_V1o1I5eEbw9nH-r_eETSjbu13A5zZp71HvnneMrGlagJ0a1VUOYMA_1XKmCbgoocFZOJLWIUT9eN9FvCfoa8o_kSh8j5VStRzWCCLHfvWv427FENm4oSL5bTS_9JGSBG02462yhg8PKUkz6sEDUh8-xJkJKfL3Jrj3rQWILGt7pPNy1tbEv7Nb9AUhewvqa5axPYNysg9M2Qtw3GuMirWEorr2dr5cTfQTqoN8G_TUVp4B0wIa-rFq5tPCseUY_ljRK7loDe9jlt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-on-primary">
+<h3 class="text-3xl font-headline mb-3">Facial Treatment</h3>
+<p class="text-on-primary/80 max-w-sm font-body">Perawatan wajah mendalam yang dirancang khusus untuk mengembalikan kilau alami dan hidrasi maksimal kulit Anda.</p>
+</div>
+</div>
+</div>
+<!-- Vertical Stack -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container h-full p-8 rounded-xl flex flex-col justify-between border border-transparent hover:border-primary-container transition-all">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="rebase_edit">rebase_edit</span>
+</div>
+<h3 class="text-2xl font-headline">Laser Therapy</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed">Teknologi laser mutakhir untuk solusi pigmentasi, tekstur kulit, dan penghapusan tanda lahir tanpa rasa sakit.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm mt-6" href="#">
+                            Pelajari Lebih Lanjut
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container h-full p-8 rounded-xl flex flex-col justify-between border border-transparent hover:border-primary-container transition-all">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="clinical_notes">clinical_notes</span>
+</div>
+<h3 class="text-2xl font-headline">Anti-Aging</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed">Rahasia awet muda melalui prosedur injeksi dan stimulasi kolagen yang aman serta diawasi dokter ahli.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm mt-6" href="#">
+                            Pelajari Lebih Lanjut
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Dokter -->
+<section class="bg-surface-container-low py-32 overflow-hidden" id="tentang">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<!-- Decorative Frame -->
+<div class="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-primary-container/30"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/5] object-cover" data-alt="portrait of a confident female dermatologist in a clean white medical coat with a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU3i8C3M4Hr1FMgXFLw1CfHEN4hUI9zAxMF04bppW9iaW27KTxzvOLd0B0EiUlP5vD0LYLuxT9Z6ofq7BlrzwyKTCimHh2ILyF7Lxye0Laq8HQhE-TMbRZ07nlAoyrWfchaLv_3mPgL9eHnAKGb9km_ie11d1lVUBkQITYxRwjwl81UB5cTfdg37meFs4__5vC3RTYHbq2WRAUItxyS_7baFEbcfx6PAvYk-exDj81OegJvvBF4QV_gDUSfdPNFUUJnsafb6l2r3af"/>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-surface p-8 rounded-xl shadow-xl max-w-[280px]">
+<p class="font-serif italic text-primary text-lg">"Kecantikan sejati dimulai dari kesehatan kulit yang terjaga."</p>
+</div>
+</div>
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">Pakar Kami</span>
+<h2 class="display-md font-headline">Temui Pakar Kami</h2>
+</div>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed">
+                            Dipimpin oleh dr. Anya Pradnya, Sp.KK, tim kami terdiri dari dokter spesialis kulit dan terapis bersertifikat yang berdedikasi untuk memberikan hasil medis yang presisi dengan sentuhan artistik.
+                        </p>
+<div class="space-y-4 border-l-2 border-primary-container pl-6">
+<div>
+<h4 class="font-bold text-on-surface">Ekspertis Global</h4>
+<p class="text-sm text-on-surface-variant">Sertifikasi internasional dalam teknik dermatologi terbaru.</p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Pendekatan Personal</h4>
+<p class="text-sm text-on-surface-variant">Setiap kulit unik, begitu pula rencana perawatan kami.</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-md font-bold tracking-wide hover:bg-primary hover:text-on-primary transition-all duration-400">
+                            Kenali Tim Medis
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8">
+<div class="max-w-5xl mx-auto bg-[#1b1c1c] rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="display-md font-headline text-surface-bright">Siap Untuk Berkilau Kembali?</h2>
+<p class="text-surface-variant text-lg max-w-2xl mx-auto">
+                        Mulai perjalanan transformasi Anda hari ini. Konsultasikan kebutuhan kulit Anda dengan para ahli kami di GlowUp Aesthetic Clinic.
+                    </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-surface-bright text-on-surface px-10 py-4 rounded-md font-extrabold tracking-wide hover:bg-primary-container hover:text-on-primary-container transition-all">
+                            Pesan Jadwal Sekarang
+                        </button>
+<div class="flex items-center gap-2 text-surface-bright/80 font-bold">
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+                            +62 21 555 8888
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f0ee] dark:bg-[#151616] full-width mt-20 w-full px-12 py-16 flex flex-col items-center gap-8 text-center" id="kontak">
+<div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-4 gap-12 text-left mb-12 border-b border-primary/10 pb-16">
+<div class="col-span-1 md:col-span-1">
+<span class="font-serif text-2xl italic text-[#78574a] mb-6 block">GlowUp Aesthetic Clinic</span>
+<p class="text-xs uppercase tracking-widest text-[#5d5f5b] leading-relaxed">
+                    Menghadirkan standar baru dalam perawatan kecantikan medis di Indonesia dengan memadukan presisi dan kemewahan.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-[#78574a] uppercase text-xs tracking-widest mb-6">Lokasi Kami</h4>
+<p class="text-xs text-[#5d5f5b] leading-loose">
+                    Jl. Senopati No. 88<br/>
+                    Kebayoran Baru, Jakarta Selatan<br/>
+                    DKI Jakarta, 12110
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-[#78574a] uppercase text-xs tracking-widest mb-6">Hubungi</h4>
+<p class="text-xs text-[#5d5f5b] leading-loose">
+                    T: (021) 555-8888<br/>
+                    WA: +62 812-3456-7890<br/>
+                    E: care@glowupclinic.com
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-[#78574a] uppercase text-xs tracking-widest mb-6">Ikuti Kami</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-sans text-xs uppercase tracking-widest text-[#5d5f5b]">
+<a class="hover:text-[#78574a] transition-colors duration-300" href="#">Kebijakan Privasi</a>
+<a class="hover:text-[#78574a] transition-colors duration-300" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-[#78574a] transition-colors duration-300" href="#">Lokasi Klinik</a>
+</div>
+<p class="font-sans text-xs uppercase tracking-widest text-[#5d5f5b] mt-4">
+            © 2024 GlowUp Aesthetic Clinic. Presisi Medis, Kemewahan Artistik.
+        </p>
+</footer>
+<!-- Mobile Navigation Drawer (Floating Toggle) -->
+<div class="md:hidden fixed bottom-6 right-6 z-[100]">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</body></html>

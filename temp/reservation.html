@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c3a47f",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e2c19b",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e4e2e1",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-container": "#e0e0db",
+                    "outline-variant": "#d4c3bd",
+                    "tertiary-fixed": "#ffddb6",
+                    "inverse-on-surface": "#f3f0f0",
+                    "primary-container": "#c9a091",
+                    "on-surface": "#1b1c1c",
+                    "surface": "#fcf9f8",
+                    "outline": "#82746f",
+                    "on-tertiary-fixed": "#291801",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#78574a",
+                    "on-primary-container": "#54372b",
+                    "on-primary-fixed-variant": "#5e3f34",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0eded",
+                    "surface-bright": "#fcf9f8",
+                    "primary-fixed": "#ffdbce",
+                    "on-secondary-fixed": "#1a1c19",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf9f8",
+                    "secondary-fixed-dim": "#c6c7c2",
+                    "on-secondary-container": "#62635f",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2e1",
+                    "secondary-fixed": "#e3e3de",
+                    "primary-fixed-dim": "#e9bdad",
+                    "on-secondary-fixed-variant": "#454744",
+                    "on-background": "#1b1c1c",
+                    "tertiary": "#735a3a",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-container": "#503a1d",
+                    "inverse-primary": "#e9bdad",
+                    "on-primary-fixed": "#2d150c",
+                    "primary": "#78574a",
+                    "surface-dim": "#dcd9d9",
+                    "on-surface-variant": "#504440",
+                    "on-tertiary-fixed-variant": "#594325",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5d5f5b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fcf9f8;
+        }
+        .serif-header {
+            font-family: 'Noto Serif', serif;
+        }
+        .rose-gold-gradient {
+            background: linear-gradient(135deg, #78574a 0%, #c9a091 100%);
+        }
+        input:focus, select:focus {
+            outline: none !important;
+            border-color: #c9a091 !important;
+            ring: 0 !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#fcf9f8]/80 dark:bg-[#1b1c1c]/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50 shadow-sm shadow-[#78574a]/5">
+<div class="flex items-center gap-4">
+<a class="text-[#78574a] hover:opacity-80 transition-opacity duration-400 flex items-center" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<span class="font-['Noto_Serif'] font-bold text-[#78574a] tracking-widest uppercase">GlowUp Clinic</span>
+</div>
+<div class="hidden md:flex gap-6">
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest text-[#5d5f5b] opacity-60">Kembali ke Beranda</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-4xl mx-auto w-full px-6 py-12 md:py-20">
+<!-- Hero Section Asymmetric -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-16">
+<div class="md:col-span-7">
+<h1 class="serif-header text-5xl md:text-6xl text-primary font-bold tracking-tight mb-6">Reservasi Layanan</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md font-light">
+                    Mulailah perjalanan Anda menuju kecantikan abadi. Pilih waktu yang paling sesuai untuk konsultasi eksklusif bersama para ahli kami.
+                </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Elegant spa setting" class="w-full h-full object-cover" data-alt="close-up of aesthetic clinic treatment room with soft warm lighting, rose gold accents and fresh white towels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMNoAvV35BNnLeea6Bt8vM6wQmv2n5E0xggoSuaKtbOblZ5D0XdUiyZrtD2XHWzetigGd68HTn78Slxh3Ut4-PkKk_OVY5vXCZdSbDexJ5dNboo4q9IkD7dWN4Cp2Is1N2btDBGFTbZ2s1zaAR4w6H97VSUcS1SoTNWsDqbHqZUKrIlRX0019p8NwC2oNsjKaxz-GmHniEhGX6zmFKCYsy00td4X4BtF5wjyUZS8MFzC8duY6r1UQyhsHhP8UEjED193upxCbsDvam"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl hidden md:block border border-outline-variant/15">
+<span class="text-primary font-bold text-2xl serif-header">Premium Care</span>
+</div>
+</div>
+</div>
+<!-- Reservation Form Shell -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 md:p-12 shadow-[0_30px_60px_rgba(120,87,74,0.05)] border border-outline-variant/10">
+<form action="#" class="space-y-10" method="POST">
+<!-- Section: Personal Information -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">01. Data Diri</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Nama Lengkap</label>
+<input class="bg-transparent border-b border-outline-variant py-3 px-1 text-on-surface placeholder:text-outline-variant focus:border-primary transition-colors font-light" placeholder="Nama Lengkap Anda" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Nomor WhatsApp</label>
+<input class="bg-transparent border-b border-outline-variant py-3 px-1 text-on-surface placeholder:text-outline-variant focus:border-primary transition-colors font-light" placeholder="Nomor WhatsApp (contoh: 0812...)" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Section: Service Choice -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">02. Layanan</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Pilihan Layanan</label>
+<select class="bg-transparent border-b border-outline-variant py-3 px-1 text-on-surface focus:border-primary transition-colors font-light appearance-none cursor-pointer">
+<option value="">Pilih Prosedur Perawatan</option>
+<option value="facial">Facial - Deep Cleansing &amp; Brightening</option>
+<option value="laser">Laser - Skin Rejuvenation</option>
+<option value="botox">Botox - Wrinkle Reduction</option>
+<option value="filler">Filler - Dermal Definition</option>
+<option value="konsultasi">Konsultasi Umum dengan Dokter</option>
+</select>
+</div>
+</div>
+<!-- Section: Schedule -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">03. Jadwal Kunjungan</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Pilih Tanggal</label>
+<input class="bg-surface-container-high/30 border-none rounded-lg p-4 text-on-surface focus:ring-1 focus:ring-primary font-light" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Pilih Sesi Waktu</label>
+<div class="grid grid-cols-1 gap-3">
+<label class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low border border-transparent hover:border-primary/30 transition-all cursor-pointer group">
+<input class="text-primary focus:ring-primary border-outline-variant" name="time_slot" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-semibold">Sesi Pagi</span>
+<span class="text-xs text-on-surface-variant">09:00 - 12:00</span>
+</div>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low border border-transparent hover:border-primary/30 transition-all cursor-pointer group">
+<input class="text-primary focus:ring-primary border-outline-variant" name="time_slot" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-semibold">Sesi Siang</span>
+<span class="text-xs text-on-surface-variant">13:00 - 15:00</span>
+</div>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low border border-transparent hover:border-primary/30 transition-all cursor-pointer group">
+<input class="text-primary focus:ring-primary border-outline-variant" name="time_slot" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-semibold">Sesi Sore</span>
+<span class="text-xs text-on-surface-variant">16:00 - 18:00</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="pt-8">
+<button class="rose-gold-gradient w-full py-5 rounded-md text-white font-bold tracking-[0.15em] uppercase text-sm shadow-xl shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-400 flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined text-lg">brand_awareness</span>
+                        Konfirmasi Reservasi via WhatsApp
+                    </button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 font-light italic">
+                        *Admin kami akan segera menghubungi Anda melalui WhatsApp untuk verifikasi jadwal.
+                    </p>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fcf9f8] dark:bg-[#1b1c1c] border-t border-[#78574a]/5 flex flex-col items-center gap-6 px-8 py-12 max-w-7xl mx-auto w-full mb-4">
+<span class="font-['Noto_Serif'] text-sm italic text-[#78574a]">Preserving timeless beauty.</span>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs font-light tracking-wide text-[#5d5f5b] hover:text-[#78574a] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-xs font-light tracking-wide text-[#5d5f5b] hover:text-[#78574a] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-['Manrope'] text-xs font-light tracking-wide text-[#5d5f5b] hover:text-[#78574a] transition-colors duration-300" href="#">Contact Us</a>
+</div>
+<p class="font-['Manrope'] text-xs font-light tracking-wide text-[#5d5f5b] opacity-60">© 2024 GlowUp Aesthetic Clinic.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-[#fcf9f8] border-t-[0.5px] border-[#78574a]/10 shadow-[0_-4px_20px_rgba(120,87,74,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-[#5d5f5b] opacity-60 hover:text-[#78574a] transition-all duration-400 scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[8px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5d5f5b] opacity-60 hover:text-[#78574a] transition-all duration-400 scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span class="font-['Manrope'] text-[8px] font-semibold uppercase tracking-widest mt-1">Treatments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#78574a] bg-[#fcf9f8] relative after:content-[''] after:absolute after:bottom-[-2px] after:w-1 after:h-1 after:bg-[#78574a] after:rounded-full scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Manrope'] text-[8px] font-semibold uppercase tracking-widest mt-1">Reserve</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5d5f5b] opacity-60 hover:text-[#78574a] transition-all duration-400 scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[8px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
