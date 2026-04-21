@@ -32,7 +32,7 @@
     overflow-x: hidden;
   }
 
-  /* Grainy Texture Overlay */
+  /* Grainy Texture Overlay Removed for Performance */
   body::before {
     content: "";
     position: fixed;
@@ -43,7 +43,7 @@
     pointer-events: none;
     z-index: 9999;
     opacity: 0.035;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    /* background-image removed to achieve 100% Core Web Vitals on Mobile */
     filter: brightness(1);
   }
 }

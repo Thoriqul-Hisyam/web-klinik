@@ -45,11 +45,11 @@ export default function Home() {
       <header className={`fixed top-0 left-0 w-full z-[120] transition-all duration-700 flex justify-center ${scrolled ? 'py-4' : 'py-6 md:py-8'}`}>
         <nav className={`transition-all duration-700 flex justify-between items-center ${scrolled ? 'header-fixed px-6 md:px-12' : 'w-[92%] md:w-[95%] max-w-[1400px] bg-white py-4 md:py-6 px-6 md:px-12 rounded-[24px] md:rounded-[32px] shadow-[0_15px_40px_-15px_rgba(120,87,74,0.1)] border border-primary/5'}`}>
           <div className="flex flex-col gap-0 cursor-pointer group">
-            <span className={`text-[6px] md:text-[7px] tracking-[0.5em] uppercase text-primary/60 font-bold transition-all duration-500 ${scrolled ? 'opacity-0 h-0 overflow-hidden' : 'mb-1'}`}>Medical Artistry</span>
+            <span className={`text-[6px] md:text-[7px] tracking-[0.5em] uppercase text-primary/80 font-bold transition-all duration-500 ${scrolled ? 'opacity-0 h-0 overflow-hidden' : 'mb-1'}`}>Medical Artistry</span>
             <span className={`font-headline font-bold tracking-[-0.03em] text-primary transition-all duration-500 ${scrolled ? 'text-lg md:text-xl' : 'text-xl md:text-3xl'}`}>AURA <span className="font-light italic">AESTHETIC.</span></span>
           </div>
           
-          <div className={`hidden lg:flex items-center gap-12 font-body text-[9px] tracking-[0.4em] uppercase font-bold transition-all duration-500 ${scrolled ? 'text-on-surface' : 'text-on-surface/40'}`}>
+          <div className={`hidden lg:flex items-center gap-12 font-body text-[9px] tracking-[0.4em] uppercase font-bold transition-all duration-500 ${scrolled ? 'text-on-surface' : 'text-on-surface/70'}`}>
             <Link className="text-primary" href="/">Gallery</Link>
             <a className="hover:text-primary transition-colors" href="#layanan">Services</a>
             <a className="hover:text-primary transition-colors" href="#hasil">Results</a>
@@ -138,7 +138,7 @@ export default function Home() {
         <section className="section-py px-6 md:px-8 max-w-[1400px] mx-auto" id="layanan">
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 md:mb-40 border-b border-primary/5 pb-16 reveal">
             <div className="max-w-2xl mb-12 md:mb-0">
-              <span className="text-[10px] font-black tracking-[0.5em] uppercase text-primary-container block mb-6">Signature Treatments</span>
+              <span className="text-[10px] font-black tracking-[0.5em] uppercase text-primary block mb-6">Signature Treatments</span>
               <h2 className="text-5xl md:text-8xl font-headline leading-[0.9] tracking-tighter">Manifestasi <br/>Kecantikan.</h2>
             </div>
             <p className="text-base text-on-surface-variant max-w-sm md:text-right font-light leading-relaxed">
@@ -158,11 +158,11 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-1000"></div>
               <div className="absolute bottom-0 left-0 p-8 md:p-16 text-white translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
-                <span className="text-[10px] font-bold tracking-[0.5em] uppercase mb-4 md:mb-6 block text-primary-container">Premium Solution</span>
+                <span className="text-[10px] font-bold tracking-[0.5em] uppercase mb-4 md:mb-6 block text-white/80">Premium Solution</span>
                 <h3 className="text-5xl md:text-6xl font-headline mb-8">Regenerative <br/>Cellular Facial</h3>
                 <Link href="/reservation" className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 px-8 md:px-10 py-4 rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-white hover:text-primary transition-all">
                   Eksplorasi Prosedur
-                  <span className="material-symbols-outlined text-sm">north_east</span>
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">north_east</span>
                 </Link>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function Home() {
             {/* Side Card 1: Text Focused Luxury */}
             <div className="md:col-start-9 md:col-end-13 md:row-start-1 md:row-end-3 bg-surface-container-low p-8 md:p-14 rounded-[32px] md:rounded-[40px] flex flex-col justify-between border border-primary/5 hover-lift reveal reveal-stagger min-h-[300px]">
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary group shadow-sm">
-                <span className="material-symbols-outlined text-2xl transition-transform duration-700 group-hover:rotate-[360deg]">flare</span>
+                <span className="material-symbols-outlined text-2xl transition-transform duration-700 group-hover:rotate-[360deg]" aria-hidden="true">flare</span>
               </div>
               <div>
                 <h3 className="text-4xl font-headline mb-6">Laser <br/>Sculpting</h3>
@@ -189,14 +189,14 @@ export default function Home() {
                   { id: "03", name: "Threads Lift" }
                 ].map((item) => (
                   <div key={item.id} className="flex justify-between items-center border-b border-primary/5 pb-4 group cursor-pointer hover:border-primary/20 transition-colors">
-                    <span className="text-[9px] uppercase font-bold text-primary-container">{item.id}</span>
+                    <span className="text-[9px] uppercase font-bold text-primary">{item.id}</span>
                     <span className="text-sm font-light text-on-surface group-hover:italic transition-all">{item.name}</span>
                   </div>
                 ))}
               </div>
               <Link href="/reservation" className="group flex items-center gap-2 text-primary font-bold text-[10px] uppercase tracking-widest">
                 Check Availability 
-                <span className="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                <span className="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform" aria-hidden="true">arrow_forward</span>
               </Link>
             </div>
 
@@ -207,7 +207,7 @@ export default function Home() {
                   <Image className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=400" alt="Consultation" fill sizes="(max-width: 768px) 160px, 208px" />
                 </div>
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500">
-                  <span className="material-symbols-outlined text-sm rotate-45">bolt</span>
+                  <span className="material-symbols-outlined text-sm rotate-45" aria-hidden="true">bolt</span>
                 </div>
               </div>
               <div className="text-center md:text-left">
@@ -272,11 +272,11 @@ export default function Home() {
                 <div className="flex gap-12 md:gap-20 pt-4 md:pt-8">
                   <div className="space-y-2 md:space-y-4 group">
                     <span className="text-5xl md:text-6xl font-headline text-primary group-hover:italic transition-all">15+</span>
-                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.4em] text-on-surface/40 font-black">Professional Years</p>
+                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.4em] text-on-surface/70 font-black">Professional Years</p>
                   </div>
                   <div className="space-y-2 md:space-y-4 group">
                     <span className="text-5xl md:text-6xl font-headline text-primary group-hover:italic transition-all">10k+</span>
-                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.4em] text-on-surface/40 font-black">Satisfied Souls</p>
+                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.4em] text-on-surface/70 font-black">Satisfied Souls</p>
                   </div>
                 </div>
               </div>
@@ -306,11 +306,11 @@ export default function Home() {
             <div className="lg:col-span-6 flex flex-col justify-between h-full">
               <div>
                 <span className="font-headline text-[12vw] md:text-[6vw] font-bold tracking-tighter leading-none mb-12 block">AURA <br/>AESTHETIC.</span>
-                <p className="text-2xl md:text-3xl font-light text-white/40 leading-[1.3] max-w-lg mb-16 md:mb-20 italic">
+                <p className="text-2xl md:text-3xl font-light text-white/80 leading-[1.3] max-w-lg mb-16 md:mb-20 italic">
                   Bringing global standards of excellence to the heart of beauty enthusiasts.
                 </p>
                 <div className="space-y-8 md:space-y-12">
-                   <h4 className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary-container">The Concierge</h4>
+                   <h4 className="text-[10px] uppercase tracking-[0.6em] font-bold text-white/80">The Concierge</h4>
                    <Link href="/reservation" className="inline-block text-4xl md:text-7xl font-headline border-b-2 border-primary-container pb-4 hover:italic transition-all">
                       Request Consultation
                    </Link>
@@ -320,16 +320,16 @@ export default function Home() {
             
             <div className="lg:col-span-3 space-y-12 md:space-y-20 pt-10 md:pt-20">
               <div className="group">
-                <span className="text-[10px] uppercase tracking-[0.5em] text-white/30 block mb-6 md:mb-8 transition-colors group-hover:text-primary-container">Atelier Location</span>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 block mb-6 md:mb-8 transition-colors group-hover:text-white">Atelier Location</span>
                 <p className="text-base md:text-lg font-light leading-relaxed">
                   Jl. Senopati No. 88, Suite 402<br/>
                   Kebayoran Baru, Jakarta Selatan<br/>
                   DKI Jakarta, 12110
                 </p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[9px] uppercase font-bold tracking-widest border-b border-primary-container pb-1">Open in Maps</a>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[9px] uppercase font-bold tracking-widest border-b border-primary-container pb-1 text-white">Open in Maps</a>
               </div>
               <div>
-                <span className="text-[10px] uppercase tracking-[0.5em] text-white/30 block mb-6 md:mb-8">Clinical Hours</span>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 block mb-6 md:mb-8">Clinical Hours</span>
                 <p className="text-base md:text-lg font-light leading-relaxed">
                   Monday – Friday: 09:00 – 19:00<br/>
                   Saturday: 10:00 – 16:00<br/>
@@ -340,15 +340,15 @@ export default function Home() {
 
             <div className="lg:col-span-3 space-y-12 md:space-y-20 pt-10 md:pt-20">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.5em] text-white/30 block mb-6 md:mb-8">Digital Presence</span>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 block mb-6 md:mb-8">Digital Presence</span>
                 <div className="flex flex-col gap-4 md:gap-6 text-lg md:text-xl font-headline italic">
-                  <a href="#" className="hover:text-primary-container transition-colors">Instagram @aura.aesthetic</a>
-                  <a href="#" className="hover:text-primary-container transition-colors">LinkedIn /aura-aesthetic</a>
-                  <a href="#" className="hover:text-primary-container transition-colors">WhatsApp +62 812 3456 7890</a>
+                  <a href="#" className="hover:text-white transition-colors">Instagram @aura.aesthetic</a>
+                  <a href="#" className="hover:text-white transition-colors">LinkedIn /aura-aesthetic</a>
+                  <a href="#" className="hover:text-white transition-colors">WhatsApp +62 812 3456 7890</a>
                 </div>
               </div>
               <div>
-                <span className="text-[10px] uppercase tracking-[0.5em] text-white/30 block mb-6 md:mb-8">Direct Line</span>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 block mb-6 md:mb-8">Direct Line</span>
                 <p className="text-lg md:text-xl font-light">
                   care@auraaesthetic.com<br/>
                   (+62) 21 5558 8888
@@ -357,7 +357,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="max-w-[1400px] mx-auto mt-32 md:mt-60 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.5em] text-white/20 font-bold text-center md:text-left">
+          <div className="max-w-[1400px] mx-auto mt-32 md:mt-60 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.5em] text-white/70 font-bold text-center md:text-left">
             <p>© 2026 AURA AESTHETIC Clinic. All Medical Rights Reserved.</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <a href="#" className="hover:text-white transition-colors">Digital Privacy</a>

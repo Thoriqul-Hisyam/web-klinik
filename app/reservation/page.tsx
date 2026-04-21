@@ -54,12 +54,12 @@ export default function ReservationPage() {
         <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           <div className="lg:col-span-5 space-y-8 md:space-y-12 text-center lg:text-left">
-            <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-primary-container block">The Concierge</span>
+            <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-primary block">The Concierge</span>
             <h1 className="font-headline text-5xl md:text-7xl leading-[0.9] text-primary">Reservasi <br/><span className="italic font-light">Privat.</span></h1>
             <p className="text-base md:text-lg text-on-surface-variant font-light leading-relaxed max-w-sm mx-auto lg:mx-0">
               Satu langkah menuju transformasi. Tim ahli kami menanti untuk menyambut kehadiran Anda dalam suasana yang tenang dan eksklusif.
             </p>
-            <div className="pt-4 md:pt-8 flex flex-col md:flex-row lg:flex-col gap-4 text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface/40 font-bold justify-center lg:justify-start">
+            <div className="pt-4 md:pt-8 flex flex-col md:flex-row lg:flex-col gap-4 text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface/70 font-bold justify-center lg:justify-start">
               <div className="flex items-center gap-4">
                 <div className="w-1 h-1 bg-primary rounded-full"></div>
                 <span>Konsultasi Medis Mendalam</span>
@@ -83,18 +83,18 @@ export default function ReservationPage() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="flex flex-col gap-4">
-                      <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/40">Nama Lengkap</label>
+                      <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/80">Nama Lengkap</label>
                       <input 
                         id="name" name="name" value={formData.name} onChange={handleInputChange} required
-                        className="bg-transparent border-b border-primary/20 py-4 text-sm font-light focus:border-primary focus:outline-none transition-all placeholder:text-on-surface/20" 
+                        className="bg-transparent border-b border-primary/20 py-4 text-sm font-light focus:border-primary focus:outline-none transition-all placeholder:text-on-surface/60" 
                         placeholder="Ex: Sofia Alana" 
                       />
                     </div>
                     <div className="flex flex-col gap-4">
-                      <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/40">WhatsApp Number</label>
+                      <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/80">WhatsApp Number</label>
                       <input 
                         id="phone" name="phone" type="tel" value={formData.phone} onChange={handleInputChange} required
-                        className="bg-transparent border-b border-primary/20 py-4 text-sm font-light focus:border-primary focus:outline-none transition-all placeholder:text-on-surface/20" 
+                        className="bg-transparent border-b border-primary/20 py-4 text-sm font-light focus:border-primary focus:outline-none transition-all placeholder:text-on-surface/60" 
                         placeholder="0812xxxx" 
                       />
                     </div>
@@ -108,7 +108,7 @@ export default function ReservationPage() {
                     <div className="h-[1px] flex-grow bg-primary/10"></div>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <label htmlFor="service" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/40">Pilihan Perawatan</label>
+                    <label htmlFor="service" className="text-[10px] font-bold uppercase tracking-widest text-on-surface/80">Pilihan Perawatan</label>
                     <select 
                       id="service" name="service" value={formData.service} onChange={handleInputChange} required
                       className="bg-transparent border-b border-primary/20 py-4 text-sm font-light focus:border-primary focus:outline-none cursor-pointer appearance-none"
@@ -142,7 +142,7 @@ export default function ReservationPage() {
                       {["Pagi", "Siang", "Sore"].map((slot) => (
                         <label 
                           key={slot} 
-                          className={`flex items-center justify-center py-4 rounded-xl md:rounded-2xl text-[9px] md:text-[10px] uppercase font-bold tracking-widest transition-all cursor-pointer ${formData.timeSlot === slot ? 'bg-primary text-white shadow-lg' : 'bg-surface-container hover:bg-primary/10 text-on-surface/60'}`}
+                          className={`flex items-center justify-center py-4 rounded-xl md:rounded-2xl text-[9px] md:text-[10px] uppercase font-bold tracking-widest transition-all cursor-pointer ${formData.timeSlot === slot ? 'bg-primary text-white shadow-lg' : 'bg-surface-container hover:bg-primary/10 text-on-surface/80'}`}
                         >
                           <input type="radio" name="timeSlot" value={slot} checked={formData.timeSlot === slot} onChange={handleInputChange} className="sr-only" required />
                           {slot}
@@ -166,7 +166,7 @@ export default function ReservationPage() {
 
       {/* Footer Minimalist */}
       <footer className="relative z-10 py-12 px-8">
-        <div className="mt-12 pt-8 border-t border-primary/10 flex justify-between items-center text-[8px] uppercase tracking-[0.3em] text-primary/40 font-bold">
+        <div className="mt-12 pt-8 border-t border-primary/10 flex justify-between items-center text-[8px] uppercase tracking-[0.3em] text-primary/80 font-bold">
           <p>© 2026 AURA AESTHETIC Clinic</p>
           <p>Medical Excellence</p>
         </div>
