@@ -1,97 +1,13 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    // Header scroll logic
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-
-    // Intersection Observer for scroll reveal
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll(".reveal");
-    revealElements.forEach((el) => observer.observe(el));
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <div className="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container relative">
-      
-      {/* Premium Dynamic Header */}
-      <header className={`fixed top-0 left-0 w-full z-[120] transition-all duration-700 flex justify-center ${scrolled ? 'py-4' : 'py-6 md:py-8'}`}>
-        <nav className={`transition-all duration-700 flex justify-between items-center ${scrolled ? 'header-fixed px-6 md:px-12' : 'w-[92%] md:w-[95%] max-w-[1400px] bg-white py-4 md:py-6 px-6 md:px-12 rounded-[24px] md:rounded-[32px] shadow-[0_15px_40px_-15px_rgba(120,87,74,0.1)] border border-primary/5'}`}>
-          <div className="flex flex-col gap-0 cursor-pointer group">
-            <span className={`text-[6px] md:text-[7px] tracking-[0.5em] uppercase text-primary/80 font-bold transition-all duration-500 ${scrolled ? 'opacity-0 h-0 overflow-hidden' : 'mb-1'}`}>Medical Artistry</span>
-            <span className={`font-headline font-bold tracking-[-0.03em] text-primary transition-all duration-500 ${scrolled ? 'text-lg md:text-xl' : 'text-xl md:text-3xl'}`}>AURA <span className="font-light italic">AESTHETIC.</span></span>
-          </div>
-          
-          <div className={`hidden lg:flex items-center gap-12 font-body text-[9px] tracking-[0.4em] uppercase font-bold transition-all duration-500 ${scrolled ? 'text-on-surface' : 'text-on-surface/70'}`}>
-            <Link className="text-primary" href="/">Gallery</Link>
-            <a className="hover:text-primary transition-colors" href="#layanan">Services</a>
-            <a className="hover:text-primary transition-colors" href="#hasil">Results</a>
-            <a className="hover:text-primary transition-colors" href="#tentang">Philosophy</a>
-          </div>
-
-          <div className="flex items-center gap-4">
-            {/* Desktop Button */}
-            <Link href="/reservation" className={`hidden lg:block rounded-full font-bold tracking-[0.2em] uppercase text-[9px] transition-all duration-500 ${scrolled ? 'bg-primary text-white px-8 py-3.5 shadow-xl shadow-primary/20' : 'bg-primary text-white px-10 py-5 hover:bg-primary-container'}`}>
-              Book Now
-            </Link>
-
-            {/* Mobile Booking Button (Always Visible) */}
-            <Link href="/reservation" className={`lg:hidden rounded-full font-bold tracking-[0.2em] uppercase text-[8px] transition-all duration-500 bg-primary text-white ${scrolled ? 'px-4 py-2.5' : 'px-5 py-3'}`}>
-              Book Now
-            </Link>
-            
-            {/* Mobile Menu Toggle */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-expanded={isMenuOpen}
-              aria-label="Toggle navigation menu"
-              aria-controls="mobile-menu"
-              className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 z-[130]"
-            >
-              <div className={`w-6 h-[1.5px] bg-primary transition-all ${isMenuOpen ? 'rotate-45 translate-y-[4.5px]' : ''}`}></div>
-              <div className={`w-6 h-[1.5px] bg-primary transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></div>
-            </button>
-          </div>
-        </nav>
-      </header>
-
-      {/* Mobile Menu Overlay */}
-      <div id="mobile-menu" className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`}>
-        <Link onClick={() => setIsMenuOpen(false)} className="mobile-nav-link text-primary" href="/">Gallery</Link>
-        <a onClick={() => setIsMenuOpen(false)} className="mobile-nav-link" href="#layanan">Services</a>
-        <a onClick={() => setIsMenuOpen(false)} className="mobile-nav-link" href="#hasil">Results</a>
-        <a onClick={() => setIsMenuOpen(false)} className="mobile-nav-link" href="#tentang">Philosophy</a>
-        <Link onClick={() => setIsMenuOpen(false)} href="/reservation" className="mt-12 bg-primary text-white px-16 py-6 rounded-full text-xs font-bold tracking-[0.5em] uppercase opacity-0 translate-y-10 transition-all duration-700 delay-500 active:scale-95">
-          Book Now
-        </Link>
-      </div>
+      <Navbar />
+      <ScrollReveal />
 
       <main>
         {/* Editorial Hero Section */}
@@ -300,8 +216,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* High-End Grand Footer Section (Updated) */}
-        <section className="bg-primary text-white pt-32 md:pt-60 pb-20 px-6 md:px-8" id="kontak">
+        {/* High-End Grand Footer Section */}
+        <footer className="bg-primary text-white pt-32 md:pt-60 pb-20 px-6 md:px-8" id="kontak">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 reveal">
             <div className="lg:col-span-6 flex flex-col justify-between h-full">
               <div>
@@ -366,28 +282,8 @@ export default function Home() {
             </div>
             <p className="italic">Designed for Excellence.</p>
           </div>
-        </section>
+        </footer>
       </main>
-
-      <style jsx global>{`
-        @keyframes slow-zoom {
-          from { transform: scale(1.1); }
-          to { transform: scale(1.2); }
-        }
-        @keyframes scroll-line {
-          from { transform: translateY(-100%); }
-          to { transform: translateY(100%); }
-        }
-        .reveal {
-          opacity: 0;
-          transform: translateY(40px);
-          transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .reveal.active {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </div>
   );
 }
